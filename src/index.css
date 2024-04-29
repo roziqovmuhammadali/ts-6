@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active__nav {
+  background-color: #4094f7;
+}
