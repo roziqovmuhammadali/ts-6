@@ -1,19 +1,15 @@
-import LoginPage from "./Login";
-
-import { Navigate, Route, Routes } from "react-router-dom";
-import DashboardPage from "./Dashboard";
+import { Route, Routes } from "react-router-dom";
 import MarketingPage from "./Marketing";
+import LoginForm from "./LoginPages/LoginForm";
+import NotFound from "./LoginPages/NotFound";
+import DashboardPage from "./Dashboard";
 
 function App() {
-  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(userInfo && true);
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route
-        path="/"
-        element={userInfo ? <DashboardPage /> : <Navigate to={`/login`} />}
-      />
+      <Route exact path="/" element={<LoginForm />} />
+      <Route exact path="*" element={<NotFound />} />
+      <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/marketing" element={<MarketingPage />} />
     </Routes>
   );

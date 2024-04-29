@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Box from "@mui/material/Box";
 import { RxTable } from "react-icons/rx";
-import Navbar from "./components/Navbar";
+import Navbar from "../src/components/Navbar";
 import image from "../public/image.png";
 
 const MarketingPage = () => {
@@ -101,14 +101,14 @@ const MarketingPage = () => {
         "Eget vulputate iaculis aliquam vel nulla tristique nec.",
         "⚡️ Быстрая доставка		"
       ),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👍"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 2", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 2", "👍"),
       age: "Активный",
     },
     {
       id: rowFunctionCall("Et sed eu volutpat tincidunt.", "😋 Вкусная еда		"),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👍"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 3", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 3", "👍"),
       age: "Активный",
     },
     {
@@ -116,14 +116,14 @@ const MarketingPage = () => {
         "Quam morbi laoreet arcu amet, orci, volutpat.",
         "🤝 Оператор был вежлив и дружелюбен		"
       ),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👎"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 4", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 4", "👎"),
       age: "Активный",
     },
     {
       id: rowFunctionCall("Ut ut sem arcu cursus.", "🐌 Долгая доставка		"),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👎"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 5", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 5", "👎"),
       age: "Активный",
     },
     {
@@ -131,8 +131,8 @@ const MarketingPage = () => {
         "Libero neque, et amet elementum diam amet nisl cras.",
         "🙁 Остывшая еда		"
       ),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👎"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 6", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 6", "👎"),
       age: "Активный",
     },
     {
@@ -140,8 +140,8 @@ const MarketingPage = () => {
         "Enim, a ipsum mattis est ultrices.",
         "🙁 Проблемы с курьером		"
       ),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👎"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 5", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 5", "👎"),
       age: "Активный",
     },
     {
@@ -149,14 +149,14 @@ const MarketingPage = () => {
         "Parturient sit lobortis ultrices dictum quis egestas.",
         "🙁 Проблемы с оператором"
       ),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", "👍"),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 6", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 6", "👍"),
       age: "Активный",
     },
     {
       id: rowFunctionCall("Feugiat vitae viverra purus massa iaculis in.", ""),
-      lastName: tableFunctionCall("10.06.2021", "Баннер 1", null),
-      firstName: tableFunctionCall("10.06.2021", "Баннер 1", ""),
+      lastName: tableFunctionCall("10.06.2021", "Баннер 7", null),
+      firstName: tableFunctionCall("10.06.2021", "Баннер 7", ""),
       age: tableFunctionCall("Активный", "Активный"),
     },
   ];
@@ -179,6 +179,7 @@ const MarketingPage = () => {
             Акции
           </li>
           <li
+            onClick={() => setDelever("banner")}
             className={`w-full py-2 pl-4 text-[14px] ${
               delever == "banner"
                 ? "bg-[#4094F7] text-white"
@@ -228,7 +229,7 @@ const MarketingPage = () => {
         </div>
 
         <div className="bg-[#DCE9F9]  px-5 py-5 h-full">
-          <div className="px-5 w-[1200px] space-y-2 pt-5 bg-white h-[550px] rounded-[6px] ">
+          <div className="px-5 w-[1200px] pt-5 bg-white h-[550px] rounded-[6px] ">
             {
               <Box>
                 {" "}

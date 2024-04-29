@@ -14,10 +14,8 @@ const Navbar = () => {
       </div>
       <div className="bg-[#F0F3F8] rounded-[6px]">
         <Link
-          to={"/"}
-          className={`flex items-center justify-center w-full  p-[10px] rounded-[6px] ${
-            navDirect == "/" ? "active__nav" : ""
-          }`}
+          to={"/dashboard"}
+          className={`flex items-center justify-center w-full  p-[10px] rounded-[6px] `}
         >
           <HiChartBar
             className={`rounded-sm ${
